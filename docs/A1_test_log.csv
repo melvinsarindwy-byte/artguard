@@ -1,0 +1,18 @@
+ArtGuard - A1: Sensor Test Log (ESP32-C6)
+Date,22/11/2026
+,
+HC-SR04 Test (distance)
+Real distance (cm),Readings (cm),Average (cm),Error (cm),Error (%)
+10,10.4 / 10.4 / 10.7 / 10.4 / 11.4,10.7,+0.7,6.6
+20,21.3 / 20.0 / 20.9 / 20.0 / 20.0 / 20.3,20.4,+0.4,2.1
+50,50.1 / 49.5 / 49.9 / 50.1 / 50.0 / 50.3 / 49.9 / 48.1 / 50.3,49.8,-0.2,0.4
+Note,"Tested range: 10-50 cm. One outlier reading (194.9 cm, object not yet in position) was excluded. HC-SR04 powered at 3.3V."
+,
+LDR Test (light level - 12-bit ADC 0-4095)
+Condition,Readings,Average
+LDR covered by hand,381 / 375 / 419 / 392 / 366 / 389 / 434 / 396 / 366 / 407,393
+Room light,1080 / 1155 / 1170,1135
+Phone flashlight (5-10 cm),2953 / 2943 / 2957 / 2979 / 2985 / 2982 / 2990,2970
+Note,"LDR in a voltage divider with a 10 kOhm resistor (3V3 - LDR - GPIO2 - 10k - GND)."
+,
+Conclusion,"Both sensors work correctly. Maximum HC-SR04 error below 1 cm in the 10-50 cm range. The LDR clearly distinguishes the three light conditions. Milestone M1 (sensors validated) achieved."
